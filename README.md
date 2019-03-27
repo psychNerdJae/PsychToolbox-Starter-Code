@@ -6,7 +6,9 @@ For stupid and purely aesthetic reasons, I prefer having as few variables in my 
 What this means, in practice, is that I just shunt off everything into a structure.
 
 R stands for Results. This structure contains all of the data that I want to analyze later, and not much of anything else. Pretty straightforward.
+
 P stands for Parameters. This structure contains stuff that isn't germane to data analysis, but is useful to have around. Specifically for referencing when writing up a manuscript, answering a reviewer's questions, etc.
+
 T stands for Task. This structure contains all of the miscellaneous stuff that makes the task work, but that I don't really care about otherwise. Purely instrumental.
 
 In theory, this tripartite organizational structure has the following benefits:
