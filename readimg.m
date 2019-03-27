@@ -1,4 +1,4 @@
-function [textureID, imageWidth, imageHeight] = readimg(filepath, wPtr, transparent)
+function [textureID, imageWidth, imageHeight] = readimg(filepath, window, transparent)
 
 if ~exist('transparent', 'var')
     transparent = 0;
@@ -16,6 +16,6 @@ end
 [imageHeight, imageWidth, ~] = size(image);
 
 % Create textures
-textureID = Screen('MakeTexture', wPtr, image);
+textureID = Screen('MakeTexture', window, image);
 
 end
