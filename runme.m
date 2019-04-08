@@ -109,7 +109,7 @@ saveWorkspace(R, T);
 
 % Show end message
 endText = ['Thank you for participating.\nPlease go find the experimenter to' ...
-' conclude this part of the experiment.'];
+    ' conclude this part of the experiment.'];
 Screen('TextSize', T.window, T.InstructTextSize);
 DrawFormattedText(T.window, endText, 'center', 'center');
 Screen('Flip', T.window);

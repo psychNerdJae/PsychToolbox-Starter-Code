@@ -45,7 +45,8 @@ R.SubInitials = subjectInitials;
 
 % Define working directories
 T.TaskDirectory = pwd;
-cd ../; T.ResultsDirectory = [pwd '/RawData'];  % Neat trick to access parent directory
+cd ../; T.ParentDirectory = pwd;  % Assumes RawData is inside parent directory
+T.ResultsDirectory = [T.ParentDirectory '/RawData'];
 T.ResourceDirectory = [T.TaskDirectory, '/Resources'];
 T.StimsDirectory = [T.ResourceDirectory, '/stims'];
 

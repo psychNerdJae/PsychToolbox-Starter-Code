@@ -50,21 +50,21 @@ end
 
 %% Monitor for (and record) keyboard responses
 while GetSecs - startTime < timeLimit
-
+    
     % Continuously check for keypress
     [keyDown, keyTime, whichKey] = KbCheck(-1);
-
+    
     % Runs if keypress is made
     if keyDown == 1
-
+        
         % Identifies which key was pressed
         userInput = KbName(whichKey);
-
+        
         % If multiple keys pressed, ignore and move onto next loop iteration
         if iscell(userInput) && length(userInput) > 1
             continue
         end
-
+        
         % Deal with cases, spaces, and numbers
         switch userInput
             case '1!'
@@ -120,17 +120,17 @@ while GetSecs - startTime < timeLimit
             otherwise
                 userInput = lower(userInput);
         end
-
+        
         % Runs if keypress matches one of the keys allowed
         if any(strcmpi(userInput, keysAllowed))
             RT = keyTime - startTime;
             flag = 1;
-
+            
             % Treats extended key depression as a single event
             if continuousPress == 0
                 KbReleaseWait;
             end
-
+            
             return
         end
     end

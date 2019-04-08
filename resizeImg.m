@@ -11,11 +11,11 @@ end
 scaleby = 1;
 
 if imgX > maxX || imgY > maxY
-  if imgX > imgY
-    scaleby = maxX/imgX;
-  else
-    scaleby = maxY/imgY;
-  end
+    if imgX > imgY
+        scaleby = maxX/imgX;
+    else
+        scaleby = maxY/imgY;
+    end
 end
 
 rescaledX = imgX * scaleby;
