@@ -10,8 +10,9 @@ function [userInput, RT, flag] = keyrec(keysAllowed, timeLimit, continuousPress)
 % Verify that this code works (slash, works *well*) in your task before using!
 % I cannot assume responsibility for errors/bugs!
 
-% If you find a bug, email me at jaeyoung@brown.edu
-% Email if you want to know whether you're using the latest version
+% If you find a bug, email me at jaeyoung@brown.edu or open issue on GitHub
+% To see if you're using the latest version, check GitHub
+% https://github.com/psychNerdJae/PsychToolbox-Starter-Code
 
 % Usage notes:
 %   keysAllowed
@@ -23,7 +24,7 @@ function [userInput, RT, flag] = keyrec(keysAllowed, timeLimit, continuousPress)
 %       0 = only registers keypress once the key is released
 %       1 = immediately registers keypress upon depression
 %       My default preference is to set continuousPress=0 because a single
-%       keypress can create thousands of keypress events while the key is
+%       keypress can create 1000s of keypress events while the key is
 %       depressed. However, this can be desirable if you are using this
 %       function inside a while loop (perhaps to continuously move a marker
 %       on a visual analogue scale using the keyboard). In either case,
