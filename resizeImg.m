@@ -11,7 +11,7 @@ end
 scaleby = 1;
 
 if imgX > maxX || imgY > maxY
-    if imgX > imgY
+    if maxX < maxY
         scaleby = maxX/imgX;
     else
         scaleby = maxY/imgY;
